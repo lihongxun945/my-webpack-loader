@@ -21,10 +21,10 @@ module.exports = {
   resolve: {
     extensions: ['.js'],
   },
-  devtool: 'eval-source-map',
   resolveLoader: {
     alias: {
-      "babel-loader": resolve('./build/babel-loader.js')
+      "babel-loader": resolve('./build/babel-loader.js'),
+      "style-loader": resolve('./build/style-loader.js')
     }
   },
   module: {
@@ -33,6 +33,14 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src')]
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader?modules'
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader'
       }
     ]
   },

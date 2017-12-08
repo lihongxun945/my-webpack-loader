@@ -1,5 +1,8 @@
 var babel = require("babel-core")
 
+/**
+ * call babel-core to transform js code, and return the transformed code
+ */
 module.exports = function (source, inputSourceMap) {
   var babelOptions = {
     presets: ['env'],
@@ -8,6 +11,5 @@ module.exports = function (source, inputSourceMap) {
     sourceMaps: true
   }
   var result = babel.transform(source, babelOptions)
-  console.log(result.code)
   this.callback(null, result.code, result.map)
 }

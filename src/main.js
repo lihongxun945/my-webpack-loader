@@ -1,4 +1,9 @@
 import People from './people'
+import styles from './style.css'
 
 const lily = new People('Lily')
 lily.sayName()
+
+const d = document.createElement('div')
+d.className = styles.avatar // css modules enabled!
+document.body.appendChild(d)

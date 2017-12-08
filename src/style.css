@@ -1,0 +1,11 @@
+@import './global.css';
+h1 {
+  color: #f00;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  background-image: url('./avatar.jpeg');
+  background-size: cover;
+}
