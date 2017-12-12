@@ -6,6 +6,7 @@ var babel = require("babel-core")
 module.exports = function (source, inputSourceMap) {
   var babelOptions = {
     presets: ['env'],
+    plugins: ["transform-react-jsx"],
     inputSourceMap: inputSourceMap,
     filename: this.request.split('!')[1].split('/').pop(),
     sourceMaps: true
