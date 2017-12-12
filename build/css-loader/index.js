@@ -97,10 +97,12 @@ module.exports = function (inputSource) {
     var cssAsString = JSON.stringify(result.css)
 
     // 处理 url
-    var URLREG =  /___CSS_LOADER_URL___([0-9]+)___/g
+    var URLREG_G =  /___CSS_LOADER_URL___(\d+)___/g
+    var URLREG =  /___CSS_LOADER_URL___(\d+)___/
     // 正则式匹配所有的占位符，然后取出其中的id，根据id在 urlItems 中找到对应的url，然后替换即可。
-    cssAsString = cssAsString.replace(URLREG, function(item) {
+    cssAsString = cssAsString.replace(URLREG_G, function(item) {
       var match = URLREG.exec(item)
+      if (!match) return item;
       const url = options.urlItems[+match[1]].url
 
       return '" + require("' + url + '") + "';

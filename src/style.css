@@ -10,3 +10,10 @@ h1 {
   background-image: url('./avatar.jpeg');
   background-size: cover;
 }
+
+.avatar2 {
+  width: 100px;
+  height: 100px;
+  background-image: url('./m.png');
+  background-size: cover;
+}

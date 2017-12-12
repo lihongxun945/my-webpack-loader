@@ -25,7 +25,9 @@ module.exports = {
     alias: {
       "babel-loader": resolve('./build/babel-loader'),
       "style-loader": resolve('./build/style-loader'),
-      "css-loader": resolve('./build/css-loader')
+      "css-loader": resolve('./build/css-loader'),
+      "file-loader": resolve('./build/file-loader'),
+      "url-loader": resolve('./build/url-loader')
     }
   },
   module: {
@@ -40,8 +42,12 @@ module.exports = {
         loader: 'style-loader!css-loader?modules'
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        test: /\.jpe?g$/,
         loader: 'url-loader'
+      },
+      {
+        test: /\.png$/,
+        loader: 'file-loader?name=[name]_[hash].[ext]'
       }
     ]
   },
