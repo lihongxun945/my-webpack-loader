@@ -23,8 +23,9 @@ module.exports = {
   },
   resolveLoader: {
     alias: {
-      "babel-loader": resolve('./build/babel-loader.js'),
-      "style-loader": resolve('./build/style-loader.js')
+      "babel-loader": resolve('./build/babel-loader'),
+      "style-loader": resolve('./build/style-loader'),
+      "css-loader": resolve('./build/css-loader')
     }
   },
   module: {

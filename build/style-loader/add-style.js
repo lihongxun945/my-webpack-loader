@@ -1,5 +1,5 @@
 module.exports = function (content) {
   var style = document.createElement("style")
-  style.innerText = content
+  style.innerHTML = content
   document.head.appendChild(style)
 }
