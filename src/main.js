@@ -2,16 +2,26 @@ import People from './people'
 import p from './p.jsx'
 import styles from './style.css'
 
-console.log(p)	// test jsx
+let d, d2
+function main() {
+  console.log(p)	// test jsx
 
-const lily = new People('Lily')
-lily.sayName()
+  const lily = new People('Lily')
+  lily.sayName()
 
-const d = document.createElement('div')
-d.className = styles.avatar // css modules enabled!
-document.body.appendChild(d)
+  d = document.createElement('div')
+  d.className = styles.avatar // css modules enabled!
+  document.body.appendChild(d)
 
-const d2 = document.createElement('div')
-d2.className = styles.avatar2 // css modules enabled!
-document.body.appendChild(d2)
+  d2 = document.createElement('div')
+  d2.className = styles.avatar2 // css modules enabled!
+  document.body.appendChild(d2)
+}
 
+main.dispose = function () {
+  console.log('dispose')
+  d.remove()
+  d2.remove()
+}
+
+module.exports = main

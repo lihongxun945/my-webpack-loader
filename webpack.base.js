@@ -12,7 +12,7 @@ const dist = resolve('dist')
 module.exports = {
   context: path.resolve(__dirname, './'),
   entry: {
-    app: './src/main.js'
+    app: './src/index.js'
   },
   output: {
     path: dist,
