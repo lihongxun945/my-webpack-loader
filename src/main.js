@@ -1,10 +1,9 @@
 import People from './people'
-import p from './p.jsx'
+// import p from './p.jsx'
 import styles from './style.css'
 
 let d, d2
 function main() {
-  console.log(p)	// test jsx
 
   const lily = new People('Lily')
   lily.sayName()
