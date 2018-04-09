@@ -1,4 +1,4 @@
-# my-babel-loader
+# my-webpack-loader
 
 show how to write your own loader
 

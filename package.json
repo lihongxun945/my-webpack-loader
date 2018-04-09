@@ -5,7 +5,7 @@
   "author": "hongxun.li <hongxun.li@ge.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config webpack.dev.js",
+    "dev": "webpack-dev-server --inline --progress --hot --config webpack.dev.js",
     "build-dev": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.pro.js",
     "start": "npm run dev"
